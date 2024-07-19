@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import Navbar from "@/components/navbar";
 import ThemeSwitch from "@/sections/ThemeSwitch";
 import Head from "next/head";
+import ActiveSectioncontextProvider from "@/context/activeSectioncontext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,10 +28,11 @@ export default function RootLayout({
       >
         <div className="bg-blue-200 dark:bg-blue-900 absolute top-[50px] left-[20px] z-[-999] blur-[10rem] w-80 h-80 rounded-full"></div>
         <div className="bg-pink-200 dark:bg-pink-900 absolute top-[-80px] right-[20px] z-[-999] blur-[10rem] w-80 h-80 rounded-full"></div>
-
-        <Navbar />
-        <ThemeSwitch />
-        {children}
+        <ActiveSectioncontextProvider>
+          <Navbar />
+          <ThemeSwitch />
+          {children}
+        </ActiveSectioncontextProvider>
       </body>
     </html>
   );

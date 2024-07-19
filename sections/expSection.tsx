@@ -2,15 +2,17 @@
 import ExpCard from "@/components/expCard";
 import Heading from "@/components/heading";
 import { Expdata } from "@/lib/expdata";
-import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import { useSectionInView } from "@/lib/hooks";
+
 export default function ExpSection() {
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref, setRefs } = useSectionInView("Experience");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
+
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
@@ -18,7 +20,7 @@ export default function ExpSection() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.45 }}
-      ref={ref}
+      ref={setRefs}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,

@@ -1,13 +1,13 @@
 "use client";
 
 import Heading from "@/components/heading";
+import { useSectionInView } from "@/lib/hooks";
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
-import { BsFacebook, BsGithub, BsSend } from "react-icons/bs";
+import { BsFacebook, BsGithub } from "react-icons/bs";
 import { IoCall, IoMail } from "react-icons/io5";
 
 function ContactSection() {
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref, setRefs } = useSectionInView("Contact");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
@@ -20,7 +20,7 @@ function ContactSection() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.65 }}
-      ref={ref}
+      ref={setRefs}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,

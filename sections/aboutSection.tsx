@@ -1,11 +1,13 @@
 "use client";
-import React, { useRef } from "react";
+
 import Heading from "@/components/heading";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
+import { useSectionInView } from "@/lib/hooks";
+
 function AboutSection() {
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref, setRefs } = useSectionInView("About");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
@@ -18,7 +20,7 @@ function AboutSection() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.65 }}
-      ref={ref}
+      ref={setRefs}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,

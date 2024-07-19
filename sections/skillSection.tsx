@@ -1,13 +1,14 @@
 "use client";
-import React, { useRef } from "react";
+
 import SkillButton from "@/components/skillButton";
 import { skillLinks } from "@/lib/data";
 import Heading from "@/components/heading";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
 
 function SkillSection() {
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref, setRefs } = useSectionInView("Skills");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
@@ -20,7 +21,7 @@ function SkillSection() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.45 }}
-      ref={ref}
+      ref={setRefs}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,
