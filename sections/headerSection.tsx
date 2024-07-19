@@ -64,7 +64,7 @@ export default function HeaderSection() {
 
         <div className=" flex ml-auto order-1 md:order-none">
           <Image
-            src={"/images/my_image.jpg"}
+            src={"/images/myImage.jpg"}
             width={300}
             height={200}
             priority={true}
