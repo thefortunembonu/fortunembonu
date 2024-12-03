@@ -39,9 +39,7 @@ export default function HeaderSection() {
             I am passionate about designing and building software products. I am
             well-versed in the
             <span className=" font-bold px-1">Django and NextJS</span>
-            frameworks. <br />
-            <br />I look forward to giving you the best services at mind-blowing
-            rates.
+            frameworks.
           </span>
           <div className="flex py-4 gap-2">
             <Link href={"#contact"}>
@@ -52,7 +50,7 @@ export default function HeaderSection() {
             </Link>
 
             <a
-              href={"/CV.pdf"}
+              href={"/CV.jpg"}
               download={true}
               className="btn-primary animate-pulse cursor-pointer"
             >
