@@ -28,7 +28,7 @@ export default function ExpSection() {
       className="px-12"
     >
       <section className="scroll-mt-28" id="experience">
-        <Heading>My Experiences</Heading>
+        <Heading>Professional Experiences</Heading>
         <div className="flex justify-center pt-4 md:pt-6">
           <div className=" space-y-6">
             {Expdata.map((expdata, index) => {

@@ -66,7 +66,7 @@ function ContactSection() {
 
           <div className="pt-4">
             <p className="text-xs text-gray-500">
-              &copy; 2024. The Fortune Mbonu
+              &copy; {new Date().getFullYear()}. The Fortune Mbonu
             </p>
             <p className="text-xs text-gray-500 text-center">
               All Rights Reserved.

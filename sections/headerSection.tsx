@@ -13,8 +13,8 @@ export default function HeaderSection() {
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
     <motion.section
@@ -27,12 +27,14 @@ export default function HeaderSection() {
         opacity: opacityProgress,
       }}
       id="hero"
-      className="flex justify-center pt-10 sm:pt-10"
+      className="flex justify-center pt-16 sm:pt-10"
     >
       <div className="md:grid md:grid-cols-2 flex flex-col px-10 md:pt-24 sm:pb-6 lg:pb-6 sm:px-24 lg:px-48  text-center items-center">
         <span className=" text-left order-2 md:order-none">
-          <h1 className=" text-3xl sm:text-4xl lg:text-6xl font-bold ">
-            Hello, I am Fortune Mbonu
+          <h1 className=" text-5xl sm:text-6xl lg:text-8xl font-bold ">
+            <span className='animate-pulse'> Hello,</span>
+            
+            <p className="pt-4">I am Fortune Mbonu</p> 
           </h1>
           <br />
           <span className="body-text">

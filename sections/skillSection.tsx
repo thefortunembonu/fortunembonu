@@ -29,7 +29,7 @@ function SkillSection() {
     >
       <section id="skills" className="scroll-mt-28">
         <Heading> My Skills </Heading>
-        <div className="flex flex-wrap justify-center gap-2 space-x-1 px-2 sm:px-24 lg:px-56">
+        <div className="flex flex-wrap justify-center gap-2 space-x-1 px-2  lg:px-96">
           {skillLinks.map((link, index) => {
             return (
               <div key={index} className="flex">

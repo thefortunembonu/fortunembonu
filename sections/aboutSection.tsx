@@ -39,7 +39,7 @@ function AboutSection() {
             alt="hero Image"
             className="rounded-3xl object-cover border border-zinc-100 dark:border-4 dark:border-gray-900/40 shadow-lg mb-8 hover:scale-110 transition"
           />
-          <p className=" !text-[0.7rem] text-justify body-text sm:px-4 lg:px-24 xl:pr-48 ">
+          <p className=" text-justify body-text sm:px-4 lg:px-24 xl:pr-48 ">
             I read Computer Science in the university and it has helped me alot
             theoretically and practically in software development.
             <br />

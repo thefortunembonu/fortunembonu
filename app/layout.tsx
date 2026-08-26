@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body
-        className={`!font-poppins bg-cyan-50/20 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`!font-poppins bg-cyan-50/95 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <div className="bg-blue-200 dark:bg-blue-900 absolute top-[50px] left-[20px] z-[-999] blur-[10rem] w-80 h-80 rounded-full"></div>
         <div className="bg-pink-200 dark:bg-pink-900 absolute top-[-80px] right-[20px] z-[-999] blur-[10rem] w-80 h-80 rounded-full"></div>
